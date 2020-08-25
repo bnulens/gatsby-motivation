@@ -1,0 +1,40 @@
+@import "./reset";
+@import "./layout";
+
+// Colors
+$paragraph: #051313;
+$aux: #130b01;
+
+* {
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    line-height: 22px;
+    color: $paragraph;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+address {
+    margin-bottom: 8px;
+}
+
+h1,
+h2,
+h3 {
+    color: $paragraph;
+}
