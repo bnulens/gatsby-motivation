@@ -1,33 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import HeaderNav from "./navbar/Navbar"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+const MainTitle = styled.h1`
+  display: block;
+  color: rebeccapurple;
+  width: 100%;
+  span {
+    margin: 0 6px;
+  }
+`
+
+const Header = () => (
+  <header>
+    <MainTitle>
+      <span>Brecht</span>
+      <span>Nulens</span>
+    </MainTitle>
+    <HeaderNav/>
   </header>
 )
 
