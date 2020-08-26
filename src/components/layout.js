@@ -1,9 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Header from "./header"
 import "../scss/global.scss"
+
+const StyledWrapper = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,11 +26,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <body>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <footer>
-          &copy; {new Date().getFullYear()}
-        </footer>
+        <StyledWrapper>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+          <footer>
+            &copy; {new Date().getFullYear()}
+          </footer>
+        </StyledWrapper>
       </body>
     </>
   )
