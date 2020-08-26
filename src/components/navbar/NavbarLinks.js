@@ -9,8 +9,17 @@ import LinkedIn from "../../icons/linkedin.svg"
 const SocialContainer = styled(Flex)`
 `
 const SocialLink = styled.a`
-    margin: 0 12px;
+    margin-right: 6px;
+    margin-left: 6px;
     transition: all ease 0.4s;
+    :first-child {
+        margin-left: 0;
+        
+    }
+    
+    :focus {
+        outline: none;
+    }
 `
 const SocialLinkWrapper = styled(Flex)`
     span {
@@ -19,10 +28,7 @@ const SocialLinkWrapper = styled(Flex)`
         font-size: 12px;
         transition: all ease 0.2s;
         :hover {
-            color: red;
-        }
-        :focus {
-            outline: none;
+            color: #41b883;
         }
     }
 `
