@@ -1,21 +1,17 @@
 @import "./reset";
 @import "./layout";
 
-// Colors
-$paragraph: #051313;
-$aux: #130b01;
-
 * {
     font-family: 'Roboto', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    color: #424242;
 }
 
 p {
     margin: 0;
     line-height: 22px;
-    color: $paragraph;
 }
 
 ul,
@@ -26,6 +22,10 @@ ol {
 }
 
 a {
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -33,13 +33,7 @@ address {
     margin-bottom: 8px;
 }
 
-h1,
-h2,
-h3 {
-    color: $paragraph;
-}
-
 body {
-    max-width: 960px;
+    width: 286px;
     margin: 0 auto;
 }
