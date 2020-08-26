@@ -4,39 +4,39 @@ import styled from "styled-components"
 import HeaderNav from "./navbar/Navbar"
 
 const StyledHeader = styled.header`
-  position: relative;
   margin-bottom: 24px;
   ::before {
     content: "";
     position: absolute;
     background: #ADFFCE;
-    width: 100%;
-    height: 52px;
-    -webkit-clip-path: polygon(0 0, 100% 0,100% 40%, 0 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 100%);
-    z-index: -5;
+    width: 120%;
+    height: 82px;
+    left: -16px;
+    clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0,100% 50%, 0 100%);
+    z-index: -1;
   }
 `
 
 const MainTitle = styled.h1`
-  width: 45%;
-  font-size: 28px;
-  padding: 6px;
+  width: 50%;
+  font-size: 40px;
+  padding-top: 24px;
   .title-first-name {
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
   }
   .title-last-name {
     font-weight: 100;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 `
 
 const Header = () => (
   <StyledHeader>
     <MainTitle>
-      <span className="title-first-name">Brecht</span>
-      <span className="title-last-name">Nulens</span>
+      <span className="title-first-name">Brecht </span><span className="title-last-name">Nulens</span>
     </MainTitle>
     <HeaderNav/>
   </StyledHeader>
