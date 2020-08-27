@@ -5,7 +5,10 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Hello, I am Brecht Nulens" />
+    <SEO 
+      title="Hello, I am Brecht Nulens" 
+      keywords={[`profile`, `presentation`, `Brecht`, `developer`]}
+      />
       <h3>This will be the only page</h3>
   </Layout>
 )
