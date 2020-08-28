@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import Header from "./header"
 import "../scss/global.scss"
+import CustomFooter from "./footer"
 
 const StyledWrapper = styled.div`
   max-width: 900px;
@@ -29,9 +30,7 @@ const Layout = ({ children }) => {
         <StyledWrapper>
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
-          <footer>
-            &copy; {new Date().getFullYear()}
-          </footer>
+          <CustomFooter/>
         </StyledWrapper>
       </body>
     </>
