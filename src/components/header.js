@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+
+import Flex from "./Flex"
 import HeaderNav from "./navbar/Navbar"
+import ProfilePicture from "./ProfilePicture"
 
 const StyledHeader = styled.header`
   margin-bottom: 24px;
@@ -16,6 +19,10 @@ const StyledHeader = styled.header`
     -webkit-clip-path: polygon(0 0, 100% 0,100% 50%, 0 100%);
     z-index: -1;
   }
+`
+
+const TitleWrapper = styled(Flex)`
+  position: relative;
 `
 
 const MainTitle = styled.h1`
@@ -35,9 +42,12 @@ const MainTitle = styled.h1`
 
 const Header = () => (
   <StyledHeader>
-    <MainTitle>
-      <span className="title-first-name">Brecht </span><span className="title-last-name">Nulens</span>
-    </MainTitle>
+    <TitleWrapper justifyContent="space-between" alignItems="center">
+      <MainTitle>
+        <span className="title-first-name">Brecht </span><span className="title-last-name">Nulens</span>
+      </MainTitle>
+      <ProfilePicture/>
+    </TitleWrapper>
     <HeaderNav/>
   </StyledHeader>
 )
