@@ -7,17 +7,21 @@ import HeaderNav from "./navbar/Navbar"
 import ProfilePicture from "./ProfilePicture"
 
 const StyledHeader = styled.header`
-  margin-bottom: 24px;
+  margin-bottom: 56px;
   ::before {
     content: "";
     position: absolute;
     background: #ADFFCE;
-    width: 120%;
+    width: 100%;
     height: 82px;
-    left: -16px;
+    left: 0;
     clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0,100% 50%, 0 100%);
-    z-index: -1;
+  }
+  @media screen and (min-width: 900px) {
+    width: 80%;
+    height: 180px;
+    margin: 0 auto;
   }
 `
 

@@ -4,12 +4,15 @@ import styled from "styled-components"
 import Flex from "./Flex"
 
 const StyledFooter = styled.footer`
-    background: #ADFFCE;
-    height: 100px;
+    postion: relative;
 `
 const FooterWrapper = styled(Flex)`
-    width: 100%;
+    position: absolute;
     font-family: 'Helvetica';
+    background: #ADFFCE;
+    height: 100px;
+    width: 100%;
+    margin-left: -16px;
     span {
         margin: 0 auto;
     }

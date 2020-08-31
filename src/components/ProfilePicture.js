@@ -3,6 +3,7 @@ import { Image } from "cloudinary-react"
 import styled from "styled-components"
 
 const StyledProfilePicture = styled(Image)`
+  display: block;
   position: absolute;
   border: 4px solid white;
   border-radius: 50%;
@@ -13,6 +14,10 @@ const StyledProfilePicture = styled(Image)`
   -webkit-box-shadow: 0px 9px 35px -14px rgba(66,66,66,0.75);
   -moz-box-shadow: 0px 9px 35px -14px rgba(66,66,66,0.75);
   box-shadow: 0px 9px 35px -14px rgba(66,66,66,0.75);
+  @media screen and (min-width: 900px) {
+    width: 164px;
+    height: 164px;
+  }
 `
 const ProfilePicture = () => {
   return (
