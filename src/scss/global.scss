@@ -1,5 +1,12 @@
-@import "./reset";
-@import "./layout";
+@import './reset';
+@import './layout';
+
+$light-color: #424242;
+$light-bg-color: white;
+$dark-color: white;
+$dark-bg-color: #424242;
+$highlight-color: #ADFFCE; 
+$dark-highlight-color: #41b883;
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -7,7 +14,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    color: #424242;
 }
 
 p {
@@ -35,11 +41,42 @@ address {
 }
 
 main {
-    height: 520px;
+    height: 100%;
     overflow: scroll;
+    color: $light-color;
+
     @media screen and (min-width: 900px) {
         width: 80%;
         height: 400px;
         margin: 0 auto;
+    }
+}
+
+div.light-mode {
+    background: $light-bg-color;
+    transition: all ease 0.4s;
+    -webkit-transition: all ease 0.4s;
+}
+
+div.dark-mode {
+    background: $dark-bg-color;
+    transition: all ease 0.4s;
+    -webkit-transition: all ease 0.4s;
+    
+    main {
+        color: $dark-color;
+        .sub-title {
+            background: #ADFFCE;
+            color: $light-color;
+            font-weight: 400;
+        }
+    }
+
+    a:not(.social-link) {
+        color: $highlight-color;
+    }
+
+    .quote-text {
+        color: $light-color;
     }
 }
