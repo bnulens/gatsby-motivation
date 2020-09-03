@@ -6,10 +6,11 @@ import styled from 'styled-components'
 import Header from './header'
 import '../scss/global.scss'
 import CustomFooter from './footer'
+import Flex from './Flex'
+import ToggleNightMode from './ToggleNightMode'
 
-const Container = styled.div`
+const Container = styled(Flex)`
   height: 100vh;
-
   @media screen and (min-width: 900px) {
     display: flex;
     align-items: center;
@@ -19,18 +20,9 @@ const Container = styled.div`
       position: absolute;
       background: ${props => props.darkMode ? '#555' : 'grey'};
       width: 100%;
-      height: 100vh;
+      height: 200vh;
       z-index: -6;
     }
-  }
-`
-const Shape = styled.svg`
-  position: absolute;
-  height: 300px;
-  width: 300px;
-
-  circle {
-    fill: green;
   }
 `
 const StyledWrapper = styled.div`
@@ -72,11 +64,9 @@ const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Container darkMode={darkMode}>
-      <Shape onClick={() => setDarkMode(!darkMode)}>
-        <circle cx="50" cy="50" r="40"/>
-      </Shape> 
+    <Container darkMode={darkMode} alignItems="center" justifyContent="center">
       <StyledWrapper className={darkMode ? "dark-mode" : "light-mode"}>
+        <ToggleNightMode value={darkMode} setDark={setDarkMode}/>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <CustomFooter/>

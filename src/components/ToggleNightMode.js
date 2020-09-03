@@ -1,10 +1,18 @@
-import React, {useState, setState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
+import NightIcon from '../icons/moon.svg'
+import DayIcon from '../icons/sun.svg'
+
 const ToggleWrapper = styled.div`
-    width: 100%;
-    height: 10px;
-    border: 1px solid blue;
+    position: absolute;
+    top: 198px;
+    left: 310px;
+    z-index: 5;
+    @media screen and (min-width: 900px) {
+        top: 172px;
+        left: 730px;
+    }
 `
 const ToggleLabel = styled.label`
     position: relative;
@@ -48,30 +56,43 @@ const HiddenInput = styled.input`
     opacity: 0;
 
     :checked + ${ToggleSlider} {
-        background: #14e081;
+        background: #41b883;
+        transition: all 0.4s ease;
     }
     :checked + ${ToggleSlider}:before {
         background: white;
         transform: translateX(20px);
         transition: all 0.4s ease;
     }
-    
 `
 
-const ToggleNightMode = () => {
-    const [darkMode, setDarkMode] = useState(false);
-    const [state, setState] = useState({
-        toggleDark: false
-    })
-    const handleChange = (e) => {
-        setState({ ...state, [e.target.name]: e.target.checked});
-    }
+const Moon = styled(NightIcon)`
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    fill: white;
+    transition: all 1s ease;
+`
+const Sun = styled(DayIcon)`
+    position: absolute;
+    top: 4px;
+    left: 24px;
+    width: 12px;
+    height: 12px;
+    fill: white;
+    transition: all 1s ease;
+`
+const ToggleNightMode = ({ value, setDark }) => {
     return (
         <ToggleWrapper>
             <ToggleLabel>
                 <HiddenLabel/>
-                <HiddenInput type="checkbox" name="toggleDark" checked={state.toggleDark} onChange={handleChange}/>
-                <ToggleSlider/>
+                <HiddenInput type="checkbox" name="toggleDark" checked={value} onChange={() => setDark(!value)}/>
+                <ToggleSlider>
+                    { value ? <Moon/> : <Sun/> }
+                </ToggleSlider>
             </ToggleLabel>
         </ToggleWrapper>
     )

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ToggleNightMode from '../components/ToggleNightMode'
 
 const MainWrapper = styled.section`
 `
@@ -81,7 +80,6 @@ const IndexPage = () => (
       keywords={[`profile`, `presentation`, `Brecht`, `developer`]}
     />
     <MainWrapper>
-      <ToggleNightMode/>
       <StyledGreeting>Dag Josiane!</StyledGreeting>
       <BlockQuote><p className="quote-text">...en aan ieder die dit leest</p></BlockQuote>
         <MainContent>
@@ -96,7 +94,7 @@ const IndexPage = () => (
             <SubTitle className="sub-title">Waarom ik?</SubTitle> 
             <p>Voordat ik begon aan mijn avontuur had ik al wat kennis over netwerken en Linux (Debian & Ubuntu). Zo had ik meer vertrouwen om in de richting van developer te gaan.
             </p>
-            <p>Sinds ik met development begonnen ben, heb ik toch al van redelijk wat zaken kunnen proeven. Zo maakte ik onder andere <ExternalLink href="https://brechtnulens.be" target="__blank" rel="noopener norefferrer">mijn portfolio website</ExternalLink> met Vue.js. Daarnaast, een voorbeeld site voor een platenwinkel in Genk <ExternalLink href="https://epic-galileo-8a7f26.netlify.app/" target="__blank" rel="noopener norefferrer">“George & the Bear”</ExternalLink>, met React en <ExternalLink href="https://gatsby.com" target="__blank" rel="noopener norefferrer">Gatsby</ExternalLink>, één van de static site generators en de <ExternalLink href="https://jamstack.org/" target="__blank" rel="noopener norefferrer">JAMstack</ExternalLink> frameworks.</p>
+            <p>Sinds ik met development begonnen ben, heb ik toch al van redelijk wat zaken kunnen proeven. Zo maakte ik onder andere <ExternalLink href="https://brechtnulens.be" target="__blank" rel="noopener norefferrer">mijn portfolio website</ExternalLink> met Vue.js. Daarnaast, een voorbeeld site voor een platenwinkel in Genk <ExternalLink href="https://epic-galileo-8a7f26.netlify.app/" target="__blank" rel="noopener norefferrer">“George & the Bear”</ExternalLink>, met React en <ExternalLink href="https://www.gatsbyjs.com/" target="__blank" rel="noopener norefferrer">Gatsby</ExternalLink>, één van de static site generators en de <ExternalLink href="https://jamstack.org/" target="__blank" rel="noopener norefferrer">JAMstack</ExternalLink> frameworks.</p>
             <span>**here comes the example image**</span>
             <StyledUnorderedList>
               <StyledListItem>Vue.js</StyledListItem>
