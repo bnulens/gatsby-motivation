@@ -1,10 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import Flex from "./Flex"
-import HeaderNav from "./navbar/Navbar"
-import ProfilePicture from "./ProfilePicture"
+import Flex from './Flex'
+import HeaderNav from './navbar/Navbar'
+import ProfilePicture from './ProfilePicture'
 
 const StyledHeader = styled.header`
   margin-bottom: 56px;
@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
     position: absolute;
     background: #ADFFCE;
     width: 100%;
-    height: 82px;
+    height: 152px;
     left: 0;
     clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0,100% 50%, 0 100%);
