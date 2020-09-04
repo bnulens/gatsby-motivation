@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Header from './header'
 import '../scss/global.scss'
+import Header from './header'
 import CustomFooter from './footer'
 import Flex from './Flex'
 import ToggleNightMode from './ToggleNightMode'
@@ -12,9 +12,6 @@ import ToggleNightMode from './ToggleNightMode'
 const Container = styled(Flex)`
   height: 100vh;
   @media screen and (min-width: 900px) {
-    display: flex;
-    align-items: center;
-
     ::before {
       content: "";
       position: absolute;
@@ -31,7 +28,7 @@ const StyledWrapper = styled.div`
   height: auto;
   padding: 0 16px;
 
-  @media screen and (min-width: 900px){
+  @media screen and (min-width: 900px) {
     position: relative;
     width: 868px;
     margin: -72px auto 0px;
