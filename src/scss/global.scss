@@ -44,10 +44,10 @@ main {
     height: 100%;
     overflow: scroll;
     color: $light-color;
-
+    
     @media screen and (min-width: 900px) {
         width: 80%;
-        height: 400px;
+        height: 45vh;
         margin: 0 auto;
     }
 }
