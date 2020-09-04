@@ -9,6 +9,17 @@ const ToggleWrapper = styled.div`
     top: 198px;
     left: 310px;
     z-index: 5;
+
+    @media screen and (min-width: 485px) {
+        top: 202px;
+        left: 400px;
+    }
+
+    @media screen and (min-width: 485px) {
+        top: 160px;
+        left: 550px;
+    }
+    
     @media screen and (min-width: 900px) {
         top: 172px;
         left: 730px;
