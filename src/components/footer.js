@@ -10,11 +10,12 @@ const FooterWrapper = styled(Flex)`
     position: absolute;
     font-family: 'Helvetica';
     background: #ADFFCE;
-    height: 100px;
+    height: 50px;
     width: 100%;
     margin-left: -16px;
     span {
         margin: 0 auto;
+        color: grey;
     }
 `
 
