@@ -5,25 +5,10 @@ import NightIcon from '../icons/moon.svg'
 import DayIcon from '../icons/sun.svg'
 
 const ToggleWrapper = styled.div`
-    position: absolute;
-    top: 198px;
-    left: 310px;
+    position: relative;
+    margin-left: 35px;
+    padding-top: 5px;
     z-index: 5;
-
-    @media screen and (min-width: 485px) {
-        top: 202px;
-        left: 400px;
-    }
-
-    @media screen and (min-width: 485px) {
-        top: 160px;
-        left: 550px;
-    }
-    
-    @media screen and (min-width: 900px) {
-        top: 172px;
-        left: 730px;
-    }
 `
 const ToggleLabel = styled.label`
     position: relative;
@@ -62,8 +47,7 @@ const ToggleSlider = styled.span`
     }
 `
 const HiddenInput = styled.input`
-    width: 0px;
-    height: 0px;
+    position: absolute;
     opacity: 0;
 
     :checked + ${ToggleSlider} {
