@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
@@ -10,7 +10,7 @@ import Flex from './Flex'
 import ToggleNightMode from './ToggleNightMode'
 
 const Container = styled(Flex)`
-  height: 100vh;
+  height: 100%;
   @media screen and (min-width: 900px) {
     ::before {
       content: "";
@@ -64,10 +64,10 @@ const Layout = ({ children }) => {
     <Container darkMode={darkMode} alignItems="center" justifyContent="center">
       <StyledWrapper className={darkMode ? "dark-mode" : "light-mode"}>
         <Header siteTitle={data.site.siteMetadata.title}>
-          <ToggleNightMode value={darkMode} setDark={setDarkMode}/>
+          <ToggleNightMode value={darkMode} setDark={setDarkMode} />
         </Header>
         <main>{children}</main>
-        <CustomFooter/>
+        <CustomFooter />
       </StyledWrapper>
     </Container>
   )
