@@ -43,8 +43,11 @@ const MainTitle = styled.h1`
     letter-spacing: 2px;
   }
 `
+const StyledHeaderNav = styled(HeaderNav)`
+  position: relative;
+`
 
-const Header = () => (
+const Header = ({ children }) => (
   <StyledHeader>
     <TitleWrapper justifyContent="space-between" alignItems="center">
       <MainTitle>
@@ -52,7 +55,9 @@ const Header = () => (
       </MainTitle>
       <ProfilePicture/>
     </TitleWrapper>
-    <HeaderNav/>
+    <StyledHeaderNav>
+      {children}
+    </StyledHeaderNav>
   </StyledHeader>
 )
 
