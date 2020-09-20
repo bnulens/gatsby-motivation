@@ -63,8 +63,9 @@ const Layout = ({ children }) => {
   return (
     <Container darkMode={darkMode} alignItems="center" justifyContent="center">
       <StyledWrapper className={darkMode ? "dark-mode" : "light-mode"}>
-        <ToggleNightMode value={darkMode} setDark={setDarkMode}/>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title}>
+          <ToggleNightMode value={darkMode} setDark={setDarkMode}/>
+        </Header>
         <main>{children}</main>
         <CustomFooter/>
       </StyledWrapper>
