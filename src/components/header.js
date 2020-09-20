@@ -7,7 +7,7 @@ import HeaderNav from './navbar/Navbar'
 import ProfilePicture from './ProfilePicture'
 
 const StyledHeader = styled.header`
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   ::before {
     content: "";
     position: absolute;
@@ -53,7 +53,7 @@ const Header = ({ children }) => (
       <MainTitle>
         <span className="title-first-name">Brecht </span><span className="title-last-name">Nulens</span>
       </MainTitle>
-      <ProfilePicture/>
+      <ProfilePicture />
     </TitleWrapper>
     <StyledHeaderNav>
       {children}
