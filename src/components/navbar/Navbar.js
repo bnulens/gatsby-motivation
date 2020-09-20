@@ -4,13 +4,16 @@ import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 
 const SocialBar = styled.nav`
-
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 `
-
-const HeaderNav = () => {
+const HeaderNav = ({ children }) => {
     return (
         <SocialBar>
-            <NavbarLinks/>
+            <NavbarLinks />
+            {children}
         </SocialBar>
     )
 }
