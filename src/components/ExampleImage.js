@@ -5,40 +5,31 @@ import Flex from './Flex'
 
 const ExampleWrapper = styled(Flex)`
     position: relative;
-    height: 300px;
-    margin-bottom: 50px;
+    height: auto;
 `
 const LinkWrapper = styled.a`
     display: block;
-    margin-bottom: 48px;
 `
 const GatsbyExample = styled(Image)`
-    position: absolute;
+    position: relative;
     display: block;
     top: 0;
     right: 0;
-    ${'' /* height: 106%; */}
     width: auto;
-    object-fit: cover;
-    object-position: 0% 0%;
-    clip-path: polygon(0 0, 70% 0, 30% 100%, 0% 100%);
-    @media screen and (min-width: 900px) {
-        height: 106%;
-    }
 `
-const VueExample = styled(Image)`
-    position: absolute;
-    display: block;
-    top: 50px;
-    right: 0;
-    object-fit: cover;
-    object-position: 0% 0%;
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 20% 100%);
-    @media screen and (min-width: 900px) {
-        top: 0;
-        height: 106%;
-    }
-`
+// const VueExample = styled(Image)`
+//     position: relative;
+//     display: block;
+//     top: 50px;
+//     right: 0;
+//     object-fit: cover;
+//     object-position: 0% 0%;
+//     clip-path: polygon(70% 0, 100% 0, 100% 100%, 20% 100%);
+//     @media screen and (min-width: 900px) {
+//         top: 0;
+//         height: 106%;
+//     }
+// `
 const ExamplePicture = () => {
   return (
     <>
@@ -55,7 +46,7 @@ const ExamplePicture = () => {
                 alt="record-store"
             />
         </LinkWrapper>
-        <LinkWrapper
+        {/* <LinkWrapper
             href="https://brechtnulens.be/"
             target="__blank"
             rel="noopener noreferrer"
@@ -66,7 +57,7 @@ const ExamplePicture = () => {
                 secure="true"
                 alt="record-store"
             />
-        </LinkWrapper>
+        </LinkWrapper> */}
     </ExampleWrapper>
     </>
   )
