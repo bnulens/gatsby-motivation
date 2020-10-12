@@ -11,13 +11,17 @@ import ToggleNightMode from './ToggleNightMode'
 
 const Container = styled(Flex)`
   height: 100%;
+  align-items: stretch;
+  justify-content: center;
   @media screen and (min-width: 900px) {
+    align-items: center;
+    height: 100vh;
     ::before {
       content: "";
       position: absolute;
       background: ${props => props.darkMode ? '#555' : 'grey'};
       width: 100%;
-      height: 200vh;
+      height: 100%;
       z-index: -6;
     }
   }
@@ -39,7 +43,7 @@ const StyledWrapper = styled.div`
       background: #41b883;
       width: 100%;
       height: 120%;
-      top: 0;
+      top: -10px;
       left: 0;
       transform: rotate(3deg);
       -webkit-transform: rotate(3deg);
@@ -61,7 +65,7 @@ const Layout = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Container darkMode={darkMode} alignItems="center" justifyContent="center">
+    <Container darkMode={darkMode}>
       <StyledWrapper className={darkMode ? "dark-mode" : "light-mode"}>
         <Header siteTitle={data.site.siteMetadata.title}>
           <ToggleNightMode value={darkMode} setDark={setDarkMode} />
