@@ -96,8 +96,8 @@ const IndexPage = () => (
       keywords={[`profile`, `presentation`, `Brecht`, `developer`]}
     />
     <MainWrapper>
-      <StyledGreeting>Dag Stefanie!</StyledGreeting>
-      <BlockQuote><p className="quote-text">...en de rest van het VITO-team</p></BlockQuote>
+      <StyledGreeting>Dag Kirsten!</StyledGreeting>
+      <BlockQuote><p className="quote-text">...en de rest van het Appwise team</p></BlockQuote>
       <MainContent>
         <Chapter>
           <SubTitle className="sub-title">Wie ben ik?</SubTitle>
