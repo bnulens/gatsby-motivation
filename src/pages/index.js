@@ -96,7 +96,7 @@ const IndexPage = () => (
       keywords={[`profile`, `presentation`, `Brecht`, `developer`]}
     />
     <MainWrapper>
-      <StyledGreeting>Dag Digiti!</StyledGreeting>
+      <StyledGreeting>Dag Thalia!</StyledGreeting>
       <BlockQuote><p className="quote-text">...en andere Digitisten</p></BlockQuote>
       <MainContent>
         <Chapter>
